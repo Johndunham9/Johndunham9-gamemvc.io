@@ -1,0 +1,98 @@
+.charTitle {
+    margin: auto;
+    border: 3px solid black;
+    padding: 10px;
+    font-size: 60pt;
+}
+
+input[type=text], select {
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  body {
+    background-image: url(./images/backdrop.png);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+
+#characterEditArea {
+    background-color: white;
+    margin: auto;
+    width: 35%;
+    border: 3px solid black;
+}
+
+#characterListArea {
+    background-color: white;
+    margin: auto;
+    width: 35%;
+    border: 3px solid black;
+}
+
+#characterTable {
+    
+    text-align: left;
+    table-layout: auto;
+    padding: 15px;
+}
+
+#characterTable td {
+    padding: 10px;
+}
+
+#characterTable tr {
+    padding: 5px;
+}
+
+.createChars {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.heroTitle {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.herocreator {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.reroll {
+    background-color: black;
+}
+
+#newBtn {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}

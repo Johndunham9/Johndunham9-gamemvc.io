@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <script src="./scripts/model.js" type="text/javascript"></script>
+        <script src="./scripts/controller.js" type="text/javascript"></script>
+        <link rel="icon" href="./images/icon.png">
+        <title>RPG Game</title>        
+    </head>
+    <body>
+        <div id="characterEditArea">
+            <h1 id="formTitle"></h1>
+            <form name="editForm">
+                <table>
+                    <tr>
+                        <h1 class="herocreator" id="herocreator">Hero Creator</h1>
+                        <td>Character Name:</td>
+                        <td><input type="text" name="characterName" /></td>
+                        <td id="characterNameError">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Race:</td>
+                        <td>
+                            <select name="raceSelect" id="raceSelect">
+                                <option value="Human">Human</option>
+                                <option value="Elf">Elf</option>
+                                <option value="Dwarf">Dwarf</option>
+                                <option value="Ork">Ork</option>
+                            </select>
+                        </td>
+                        <td id="raceError">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Class:</td>
+                        <td>
+                            <select name="classSelect" id="classSelect">
+                                <option value="Fighter">Fighter</option>
+                                <option value="Wizard">Wizard</option>
+                                <option value="Thief">Thief</option>
+                                <option value="Hunter">Hunter</option>
+                            </select>
+                        </td>
+                        <td id="classError">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>Gender:</td>
+                        <td>
+                            <label><input type="radio" name="gender" value="male" id="genderMaleRadio" />Male</label>
+                            <label><input type="radio" name="gender" value="female" id="genderFemaleRadio" />Female</label>
+                            <td id="genderError">&nbsp;</td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Left Handed?</td>
+                        <td><input type="checkbox" name="handedCheckbox" value="right" id="handedCheckbox"></td>
+                        <td id="handError">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button type="button" id="updateBtn" class="controlBtns">Update</button><br>
+                            <button type="button" id="createBtn" class="controlBtns">Create</button>
+                        </td>
+                        <td>&nbsp;<td>
+                            <button type="button" id="cancelBtn">Cancel</button>
+                        </td>
+                    </tr>
+                </table>
+                <img id="characterImage">
+                <table id="characterStats">
+                    <tr>
+                        <td>Strength</td>
+                        <td id="strength">&nbsp;</td>
+                        <td>Dexterity</td>
+                        <td id="dexterity">&nbsp;</td>
+                        <td>Constitution</td>
+                        <td id="constitution">&nbsp;</td>
+                        <tr>
+                        <td>Intelligence</td>
+                        <td id="intelligence">&nbsp;</td>
+                        <td>Wisdom</td>
+                        <td id="wisdom">&nbsp;</td>
+                        <td>Charisma</td>
+                        <td id="charisma">&nbsp;</td>
+                        </tr>
+                        <tr>
+                        <td>
+                            <button type="button" id="reroll">Reroll</button>
+                        </td>
+                        <td id=statTotal>&nbsp;</td>
+                        </tr>
+                    </tr>     
+                </table>
+            </form>
+        </div>
+
+        <div id="characterListArea">
+            <h1 class="heroTitle">Heroes</h1>
+            <table id="characterTable">
+                <tr>
+                    <th>Name</th>
+                    <th>Race</th>
+                    <th>Class</th>
+                    <th>Gender</th>
+                    <th>&nbsp;</th>
+                    <th>&nbsp;</th>
+
+                </tr>
+            </table>
+            <button type="button" id="newBtn">Create New Character</button>
+        </div>
+
+        <script>
+            modelCreateCharacter("Merlin", "Human", "Wizard", true, true);
+            modelCreateCharacter("Olza", "Ork", "Thief", false, false);
+            onPageLoad();
+        </script>
+    </body>
